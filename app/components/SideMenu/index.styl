@@ -1,0 +1,64 @@
+.side-menu-title {
+    font-size: 16px;
+    color: #222;
+    padding: 13px 24px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.side-menu {
+    flex: 1;
+    min-width: 240px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    padding-top: 8px;
+
+    .header {
+        color: #aaa;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 8px 24px 0 24px;
+        text-transform: uppercase;
+    }
+
+    .divider {
+        height: 1px;
+        margin: 8px 24px;
+        overflow: hidden;
+        background-color: #e6e6e6;
+    }
+
+    .menu-item {
+        position: relative;
+        display: block;
+        border: 0;
+        color: #222;
+        min-width: 80px;
+        padding: 6px 24px 6px 36px;
+        text-decoration: none;
+        line-height: 20px;
+        // white-space: nowrap;  // [WFBSSVC-3788] Jeffery: Wrap the menu item text under fixed width
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            outline-width: 0;
+            background: #dddddd;
+        }
+
+        &:hover {
+            background: #dddddd;
+        }
+
+        &.active {
+            color: #db3d44;
+            background: #ffffff;
+        }
+
+        &.disabled {
+            color: #bbb;
+            cursor: not-allowed;
+        }
+    }
+}
