@@ -1,5 +1,3 @@
-process.env.NODE_ENV = 'development'; // required for the `env` option of the `.babelrc` config
-
 const path = require('path');
 const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 const dotenv = require('dotenv');
@@ -8,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const without = require('lodash/without');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nib = require('nib');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const stylusLoader = require('stylus-loader');
 const webpack = require('webpack');
 const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
@@ -145,11 +142,6 @@ module.exports = {
         net: 'empty',
         tls: 'empty'
     },
-    optimization: {
-        minimizer: [
-            new OptimizeCSSAssetsPlugin()
-        ]
-    },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
@@ -165,7 +157,6 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             debug: true
         }),
-        new webpack.NoEmitOnErrorsPlugin(),
         new stylusLoader.OptionsPlugin({
             default: {
                 // nib - CSS3 extensions for Stylus

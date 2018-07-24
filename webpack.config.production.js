@@ -1,5 +1,3 @@
-process.env.NODE_ENV = 'production'; // required for the `env` option of the `.babelrc` config
-
 const path = require('path');
 const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 const findImports = require('find-imports');
