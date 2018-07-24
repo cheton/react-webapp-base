@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:trendmicro/ai-leaderboard.git"
+    "url": "git@github.com:cheton/react-webapp-base.git"
   },
   "author": "Cheton Wu <cheton_wu@trendmicro.com>",
   "dependencies": {
