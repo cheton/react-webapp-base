@@ -1,5 +1,13 @@
 {
     "presets": ["env", "stage-0", "react"],
+    "env": {
+        "development": {
+            "presets": ["react-hmre"]
+        },
+        "production": {
+            "presets": []
+        }
+    },
     "plugins": [
         "lodash",
         "syntax-dynamic-import",

@@ -7,10 +7,18 @@ module.exports = {
         'browser': true,
         'node': true
     },
-    'settings': {
+    settings: {
         'import/resolver': {
-            'webpack': {
-                'config': path.resolve(__dirname, 'webpack.config.rules.js')
+            webpack: {
+                config: {
+                    resolve: {
+                        modules: [
+                            path.resolve(__dirname),
+                            'node_modules'
+                        ],
+                        extensions: ['.js', '.jsx']
+                    }
+                }
             }
         }
     },
