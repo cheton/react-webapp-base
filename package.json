@@ -11,7 +11,7 @@
     "lint": "concurrently --kill-others-on-fail --names \"i18nlint,eslint,stylint\" \"npm run i18nlint\" \"npm run eslint-prod\" \"npm run stylint\"",
     "i18nlint": "bash -c 'find app/i18n -type f -name \"*.json\" | xargs -L1 -I{} sh -c \"echo Linting {}; jsonlint -q {}\"'",
     "eslint": "npm run eslint-prod",
-    "eslint-dev": "DEBUG=\"eslint:glob-util,eslint:config-*,eslint:cli*\" eslint --cache --ext .js --ext .jsx *.js app bin test",
+    "eslint-dev": "DEBUG=\"eslint:glob-util,eslint:config-*,eslint:cli*\" eslint --cache --ext .js --ext .jsx *.js app test",
     "eslint-prod": "eslint --ext .js --ext .jsx app",
     "stylint": "stylint app",
     "test": "tap test/*.js --node-arg=--require --node-arg=babel-register --node-arg=--require --node-arg=babel-polyfill",
